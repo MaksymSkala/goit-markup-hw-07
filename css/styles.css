@@ -53,15 +53,37 @@ html {
     text-transform: none;
 }
 .main-title-light { 
-    margin: 0 auto;
-    margin-bottom: 48px;        
-    max-width: 496px;  
-    font-size: 56px;
-    line-height: 1.07;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;    
+    min-width: 320px;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--color-white);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1,11;    
+    text-transform: capitalize;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .main-title-light {
+        margin: 0;
+        margin-bottom: 36px;
+        min-width: 496px;
+        font-size: 56px;
+        line-height: 1,07px;
+        text-transform: none;
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-title-light {
+        margin-bottom: 48px;
+    }
+}
 
 .section-title {  
     margin: 0;
@@ -297,9 +319,18 @@ button {
     padding: 188px 0 188px;    
 }
 
-.hero-container {        
+.hero-container {           
     flex-direction: column;
-    align-items: center;             
+    align-items: center;
+    width: 320px;
+    padding: 0;    
+                        
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-container {
+        width: 496px;    
+    }
 }
 
 .hero-btn {        
@@ -408,19 +439,33 @@ button {
 @media only screen and (min-width: 1200px) {
     .advantages-img-link {
         display: flex;
+        color: var(--color-navy-blue);
     }
 }
 
 /* Specialization section */
 
 .specialization {
+    display: none;
     padding-bottom: 120px;
 }
 
+@media only screen and (min-width: 1200px) {
+    .specialization {
+        display: flex;
+    }
+}
+
 .specialization-list { 
-    display: flex;
+    display: none;
     justify-content: space-between;    
     gap: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .specialization-list {
+        display: flex;
+    }
 }
 
 .specialization-item {
@@ -434,17 +479,42 @@ button {
 /* Team sectiom */
 
 .team {
-    padding: 120px 0 120px;
+    padding: 96px 0 96px;
     background-color: var(--color-cloud);
 }
+
+@media only screen and (min-width: 1200px) {
+    .team {
+        padding: 120px 0 120px;
+    }
+}
+
 .team-icon {
     
 }
 
+.team-link {
+    
+}
+
 .team-item {
-    width: calc((100% - 72px) / 4);    
+    margin: auto;
     background-color: var(--color-white);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;    
+}
+
+@media only screen and (min-width: 768px) {
+    .team-item {
+        margin: 0;
+        width: calc((100% - 24px) / 2);
+        max-width: 264px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .team-item {        
+        width: calc((100% - 72px) / 4);
+    }
 }
 
 .team-img {    
@@ -852,9 +922,24 @@ button {
 /* Card set */
 
 .card-set {
-    gap: 24px;
+    gap: 72px;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+}
+
+@media only screen and (min-width: 768px) {
+    .card-set {
+        gap: 64px 24px;
+        max-width: 552px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-set {
+        gap: 24px;
+        min-width: 1128px;
+    }
 }
 
 .card-set-item {
